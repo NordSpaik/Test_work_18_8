@@ -1,23 +1,23 @@
 # Программа, которая будет подсчитывать общую стоимость билетов на мероприятие
 
-summ_tickets = int(input("Введите желаемое количество билетов на мероприятие - "))
-print(summ_tickets)
+summ_tickets = int(input("Введите желаемое количество билетов на мероприятие - ")) # Получаем количество билетов
 
 count = 0
 summ_money = 0
 
-while count < summ_tickets:
+while count < summ_tickets: # Задаем цикл по количеству билетов для получения возраста участников
     count += 1
-    age = int(input("Введите возраст участника - "))
-    print(age)
-    if 18 <= age < 25:
+    age = int(input(f"Введите возраст {count}-го участника - "))
+    if 18 <= age < 25: # В зависимости от возраста суммируем стоимость билетов
         summ_money += 990
-        print(summ_money)
     elif age >=25:
         summ_money += 1390
-        print(summ_money)
-    else:
-        print(summ_money)
+    print(f"Сумма к оплате - {summ_money} рублей")
 
-print("Итоговая стоимость билетов равна:")
-print(summ_money)
+print()
+print("Добро пожаловать на мероприятие!")
+print(f"Итоговая стоимость билетов равна {summ_money} рублей")
+
+if summ_tickets > 3: # Проверяем обоснованность скидки в 10% по количеству билетов
+    summ_money = int(summ_money * 0.9)
+    print(f"С учетом скидки при покупке билетов на {summ_tickets} участников, сумма к оплате составляет {summ_money} рублей")
