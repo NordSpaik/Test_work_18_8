@@ -10,7 +10,7 @@ while count < summ_tickets: # Задаем цикл по количеству б
     age = int(input(f"Введите возраст {count}-го участника - "))
     if 18 <= age < 25: # В зависимости от возраста суммируем стоимость билетов
         summ_money += 990
-    elif age >=25:
+    elif age >= 25:
         summ_money += 1390
     print(f"Сумма к оплате - {summ_money} рублей")
 
